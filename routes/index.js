@@ -12,7 +12,7 @@ mongoose.connect(mongodb, {useNewUrlParser: true, useUnifiedTopology: true})
   console.log(err);
 });
 
-
+//Đã thành công
 //query dữ liệu và hiển thị trên EJS
 //query dữ liệu và trả về JSON từ MongoDB
 //định nghĩa 1 collection trước
