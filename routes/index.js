@@ -3,9 +3,10 @@ var router = express.Router();
 
 //MongoDB
 //Cách kết ối, thao tác với MôngDB
-const mongodb = 'mongodb+srv://admin:202112@cluster0.cvqww.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+const mongodb = 'mongodb+srv://hung:202112@cluster0.ordmn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
 const mongoose = require('mongoose')
-mongoose.connect(mongodb, {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
+mongoose.connect(mongodb, {useNewUrlParser: true, useUnifiedTopology: true})
+    .then(() => {
   console.log('Kết nối thành công MongoDB!');
 }).catch(err => {
   console.log(err);
@@ -22,7 +23,7 @@ const studentSCHEMA = new mongoose.Schema({
   address: String,
   phone: String,
 })
-//Model : là khái niệm để thao tác với Collection tên là Student
+//Model : là khái niệm để thao              tác với Collection tên là Student
 const STUDENT = mongoose.model('Student', studentSCHEMA)
 
 
