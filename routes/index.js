@@ -42,7 +42,12 @@ router.get('/creatUser', (req, res) => {
     phone: "" + random
   })
   student.save().then(result => {
-    res.send(result);
+    // res.send(result);
+    const ketqua = {
+      errorCode: 200,
+      message: "create user successfully",
+    }
+    res.send(ketqua)
   })
 })
 
