@@ -42,13 +42,7 @@ router.get('/creatUser', (req, res) => {
     phone: "" + random
   })
   student.save().then(result => {
-    // res.send(result);
-    const ketqua = {
-      errorCode: 200,
-      message: "create user successfully",
-    }
-    res.send(ketqua)
-    //Them phaan nay
+    res.send(result);
   })
 })
 
@@ -167,7 +161,19 @@ router.post('/creatUser', function (req, res
   })
   student.save().then(result => {
     // res.render('index', { title: "Createn User", message: "Createn User success" });
-    res.redirect('/disPlayUser')
+    // res.redirect('/disPlayUser')
+    const ketqua = {
+      errorCode: 200,
+      message: "Create user successfuly",
+    }
+    res.send(ketqua);
+  }).catch(err => {
+    console.log(err);
+    const ketqua = {
+      errorCode: 500,
+      message: "Create user fail",
+    }
+    res.send(ketqua);
   })
 })
 
