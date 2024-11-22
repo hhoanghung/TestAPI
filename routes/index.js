@@ -48,6 +48,7 @@ router.get('/creatUser', (req, res) => {
       message: "create user successfully",
     }
     res.send(ketqua)
+    //Them phaan nay
   })
 })
 
