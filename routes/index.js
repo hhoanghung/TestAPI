@@ -109,7 +109,7 @@ router.get('/getAUser', function (req, res
   var jsondata = {
     id: 1,
     name: "HÀ HOÀNG HẢI",
-    phone: 21
+    age: 21
   }
   res.send(jsondata);
 })
@@ -151,13 +151,11 @@ router.post('/creatUser', function (req, res
   // <input name="name">
   // <input name="age">
   const name = req.body.name;
-  const address = req.body.address;
-  const phone = req.body.phone;
+  const age = req.body.age;
   const random = Math.floor(Math.random() * 1000);
   const student = new STUDENT({
     name: name,
-    address: address,
-    phone: phone
+    age: age
   })
   student.save().then(result => {
     // res.render('index', { title: "Createn User", message: "Createn User success" });
